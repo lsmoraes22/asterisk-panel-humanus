@@ -40,8 +40,8 @@ class AsteriskTenantService
             File::put("{$basePath}/musiconhold.conf", view('asterisk.musiconhold', $data)->render());
 
             // 4. Ajusta permissões para o Asterisk conseguir ler
-            shell_exec("chown -R asterisk:asterisk {$basePath}");
-            shell_exec("chmod -R 775 {$basePath}");
+            shell_exec("sudo chown -R asterisk:asterisk {$basePath}");
+            shell_exec("sudo chmod -R 775 {$basePath}");
 
             // 5. Recarrega o Asterisk
             shell_exec('asterisk -rx "dialplan reload"');

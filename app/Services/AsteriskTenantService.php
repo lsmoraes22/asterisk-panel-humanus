@@ -14,6 +14,11 @@ class AsteriskTenantService
             $basePath = "/etc/asterisk/tenants/tenant-{$tenant->code}";
 
             // 1. Garante a estrutura de pastas conforme sua árvore
+            if (!File::exists("{$basePath}")) {
+                File::makeDirectory("{$basePath}", 0775, true);
+            }
+
+            // 1. Garante a estrutura de pastas conforme sua árvore
             if (!File::exists("{$basePath}/dialplan")) {
                 File::makeDirectory("{$basePath}/dialplan", 0775, true);
             }

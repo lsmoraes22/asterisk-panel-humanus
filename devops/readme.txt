@@ -1,0 +1,1 @@
+Esta pasta contém os arquivos de config para o asterisk em /etc/asterisk

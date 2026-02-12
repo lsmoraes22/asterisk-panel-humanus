@@ -1,0 +1,6 @@
+/etc/asterisk/tenants/tenant-0001/
+|-- extensions.conf      (O arquivo que o #include mestre chama)
+|-- Dialplan/            (Opcional: para organizar melhor)
+|   |-- internal.conf
+|   |-- incoming.conf
+|-- musiconhold.conf     (Se você for usar música personalizada)

@@ -44,8 +44,8 @@ class AsteriskTenantService
             shell_exec("sudo chmod -R 775 {$basePath}");
 
             // 5. Recarrega o Asterisk
-            shell_exec('asterisk -rx "dialplan reload"');
-            shell_exec('asterisk -rx "moh reload"');
+            shell_exec('sudo asterisk -rx "dialplan reload"');
+            shell_exec('sudo asterisk -rx "moh reload"');
 
             Log::info("Configurações do Tenant {$tenant->code} geradas com sucesso.");
 
